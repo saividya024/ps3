@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num=prompt("enter the number");
+var sum=0;
+for(var  i=0;i<num.length;i++)
+{
+     sum=sum+Number(num[i]);
+}
+ console.log(sum)
+ if(Number(num)%sum==0)
+    {
+        console.log("harshad number")
+    }
+    else
+    {
+        console.log("NO harshad number")
+    }
+
+var num=prompt("enter the number")
+primeSum=0;
+NonPs=0;
+function CheckPrime(n)
+{
+    for(i=2;i<n;i++)
+    {
+        if(n%i==0)
+        return false
+    }
+    return true
+}
+for(j of num)
+if(j>1)
+{
+    if(CheckPrime(j))
+    {
+     primeSum+=Number(j);
+    }
+    else
+    {
+        NonPs+=Number(j);
+       
+    }
+}
+console.log(primeSum)
+console.log(NonPs)
+if(primeSum>NonPs)
+{
+    console.log("prime sum is more")
+}
+else if(primeSum<NonPs)
+{
+    console.log("non prime sum is more")
+}
+else
+{
+    console.log("both are equal")
+}
+let number = prompt("Enter the number");
+let primes = "";
+let nonPrimes = "";
+
+// Function to check if a number is prime
+function checkPrime(n) {
+    if (n <= 1) return false; // Numbers less than or equal to 1 are not prime
+    for (let i = 2; i < n; i++) {
+        if (n % i === 0) {
+            return false; // Not a prime number
+        }
+    }
+    return true; // Prime number
+}
+
+// Loop through each digit of the input number
+for (let j of number) {
+    let digit = parseInt(j); // Convert the character to a number
+    if (digit > 1) {
+        if (checkPrime(digit)) {
+            primes += digit;
+        } else {
+            nonPrimes += digit;
+        }
+    }
+}
+console.log("Non-Prime Numbers: " + nonPrimes);
+var min=nonPrimes[0];
+for(i=1;i<nonPrimes.length;i++)
+{
+    if(nonPrimes[i]<min)
+    {
+        min=nonPrimes[i]
+    }
+}
+console.log("mininum numberin non-Prime number is:"+min)
+
+
+
+
+{
+    console.log("both are equal")
+}
+    </script>
+</body>
+</html>
